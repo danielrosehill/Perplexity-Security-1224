@@ -18,19 +18,19 @@ A test account was created using Perplexity AI and various types of mock PII dat
 
 An image from the synthetic data store was added to a prompt:
 
-![alt text](screenshots/pii-tests/image/1.png)
+ ![alt text](screenshots/pii-tests/image/image-pii-1.png)
 
 The completion included the photo:
 
-![alt text](screenshots/pii-tests/image/2.png)
+![alt text](screenshots/pii-tests/image/image-pii-2.png)
 
 The URL was accessed:
 
- ![alt text](screenshots/pii-tests/image/3.png)
+![alt text](screenshots/pii-tests/image/image-pii-3.png)
 
  The URL indicates that the photo had been uploaded to a Cloudinary CDN bucket:
 
- ![alt text](screenshots/pii-tests/image/4.png)
+![alt text](screenshots/pii-tests/image/image-pii-4.png)
 
  The full URL:
 
@@ -38,8 +38,9 @@ The URL was accessed:
 
  To verify that the resource could be accessed without authentication, the URL was pasted into a browser in a new session that was not logged into Perplexity. 
 
-![alt text](screenshots/pii-tests/image/5.png)
-
+![
+    
+](screenshots/pii-tests/image/image-pii-5.png)
 No authentication requirement prevented the resource from being accessed. 
 
 ---
@@ -48,7 +49,7 @@ No authentication requirement prevented the resource from being accessed.
 
 A document containing personally identifiable information, including an address and a phone number, was uploaded with a prompt asking for feedback on a resume:
 
-![alt text](screenshots/pii-tests/doc/1.png)
+![alt text](screenshots/pii-tests/doc/doc-pii-1.png)
 
 The URL path showed that the asset was stored in an S3 bucket.
 
@@ -58,17 +59,17 @@ It contained the following structure:
 
 The file could also be downloaded form a non-authenticated browser session:
 
-![alt text](screenshots/pii-tests/doc/2.png)
+
+![alt text](screenshots/pii-tests/doc/doc-pii-2.png)
 
 ## User-Uploaded Code With Secrets
 
 To reset handling for codes that was provided by the user, a Python program containing a hard coded secret in this repository was uploaded alongside a prompt. :
-
-![alt text](screenshots/pii-tests/code/1.png)
+![alt text](screenshots/pii-tests/code/accessible-codepii-1.png)
 
 The file structure indicated that the code had also been uploaded to an AWS bucket:
 
-![alt tex ](screenshots/pii-tests/code/2.png)
+![alt text](screenshots/pii-tests/code/accesible-code-pii-2.png)
 
  These structure was as follows:
 
@@ -76,7 +77,7 @@ The file structure indicated that the code had also been uploaded to an AWS buck
 
  As previously the script was accessible from an unauthenticated session:
 
- ![alt text](screenshots/pii-tests/code/3.png)
+![alt text](screenshots/pii-tests/code/accessible-code-pii-3.png)
 
  --
 
